@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "npx nodemon --exec babel-node server.js",
-    "start": "nodemon --exec ts-node src/index.ts",
+    "start": "nodemon --exec ts-node -r dotenv/config src/index.ts",
     "test": "cross-env PORT=8001 ./node_modules/.bin/mocha test",
     "test:cover": "nyc --reporter=text mocha",
     "test:watch": "npm run test -- --watch"
